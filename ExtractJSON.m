@@ -1,4 +1,4 @@
-% ExtractJSON extracts BrainSense Streaming data from a JSON file
+% ExtractJSON extracts the .JSON file
 % Author: Albert Guillemette, 02.06.2025
 
 % Select a JSON file to extract
