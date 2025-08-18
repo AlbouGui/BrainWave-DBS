@@ -1,8 +1,7 @@
 % Author: Albert Guillemette BSc MSc, 02.06.2025
 % STFT, MORLET WAVELET and HILBERT ANALYSIS OF SEGMENTED LFP DATA WITH PSD
-% AND SPECTROGRAMS.
-% This script performs SPECTRAL analysis on X-second epochs, calculates power spectral density,
-% creates spectrograms/scalograms.
+% AND SPECTROGRAMS/SCALOGRAMS.
+% This script performs SPECTRAL analysis on X-second epochs.
 
 % Check if segmented_data exists
 if ~exist('segmented_data', 'var')
