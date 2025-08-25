@@ -43,7 +43,7 @@ delta_f = Fs / nfft;                          % frequency resolution
 one_sided_factor = 1;                         % set to 2 if your STFT is one-sided & doubled
 scale_K = win_energy * nfft * one_sided_factor;
 
-fprintf('===  STFT, SPECTROGRAM, MORLET WAVELET AND HILBERT ANALYSIS ===\n');
+fprintf('===  STFT, MORLET WAVELET AND HILBERT ANALYSIS ===\n');
 fprintf('Sampling rate: %d Hz\n', Fs);
 fprintf('STFT window: %.1f seconds (%d samples)\n', window_length/Fs, window_length);
 fprintf('Overlap: %.1f%% (%d samples)\n', (overlap/window_length)*100, overlap);
@@ -380,7 +380,7 @@ fprintf('\n=== ANALYSIS COMPLETE ===\n');
 fprintf('Results stored in:\n');
 fprintf('  - stft_results: STFT analysis with spectrograms\n');
 fprintf('  - wavelet_results: Morlet wavelet analysis with scalograms\n');
-fprintf('  - hilbert_results: Hilbert filterbank analysis with spectrogram\n');
+fprintf('  - hilbert_results: Hilbert filterbank analysis with spectrograms\n');
 
 %% VISUALIZATION FOR ALL CONDITIONS
 
@@ -1033,5 +1033,6 @@ fprintf('- Display of ALL trials \n');
 fprintf('- Properly arranged subplots for any number of trials\n');
 fprintf('- Global normalization ensures fair comparison across trials in relative power plots\n');
 fprintf('Results stored in stft_results, wavelet_results and hilbert_results structures\n');
+
 
 % :)
