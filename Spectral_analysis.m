@@ -1034,4 +1034,5 @@ fprintf('- Properly arranged subplots for any number of trials\n');
 fprintf('- Global normalization ensures fair comparison across trials in relative power plots\n');
 fprintf('Results stored in stft_results, wavelet_results and hilbert_results structures\n');
 
+
 % :)
