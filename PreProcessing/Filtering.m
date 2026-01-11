@@ -212,7 +212,7 @@ else
     fprintf('No cardiac cleaning applied - using butter_filtered data for all conditions.\n');
 end
 
-%% 4) Smoothing
+%% 4) Smoothing (optional step)
 % Define the smoothing window size (in samples)
 smooth_window = round(0.5 * Fs); % 0.5 seconds
 fprintf('Applying smoothing (window = %.1f seconds)...\n', smooth_window/Fs);
