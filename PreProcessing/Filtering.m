@@ -215,7 +215,7 @@ end
 %% 4) Smoothing (optional step)
 
 % Choose smoothing method: 'movmean' or 'sgolay'
-smooth_method = 'sgolay';  % options: 'movmean' or 'sgolay'
+smooth_method = 'movmean';  % options: 'movmean' or 'sgolay'
 
 % Define the smoothing window size (in samples)
 smooth_window = round(0.5 * Fs); % 0.5 seconds
