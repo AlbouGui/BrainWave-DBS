@@ -214,15 +214,15 @@ end
 
 %% 4) Smoothing (optional step)
 
-% Choose smoothing method: 'movmean' or 'sgolay'
-smooth_method = 'movmean';  % options: 'movmean' or 'sgolay'
+% Choose smoothing method: 'movmean' or 'sgolay' or 'none'
+smooth_method = 'none';  % options: 'movmean' or 'sgolay' or 'none'
 
 % Define the smoothing window size (in samples)
-smooth_window = round(0.5 * Fs); % 0.5 needs to be customize depending on the filter chosen and your needs
+smooth_window = round(0.1 * Fs); % 0.5 seconds
 fprintf('Applying smoothing (window = %.1f seconds) using %s...\n', smooth_window/Fs, smooth_method);
 
 % If using Savitzky-Golay, define polynomial order
-sgolay_order = 3;  % typical: 2-4, must be less than window size
+sgolay_order = 2;  % typical: 2-4, must be less than window size
 
 for k = 1:4
     if ~isempty(d.cleaned_LFP{k})
@@ -241,6 +241,10 @@ for k = 1:4
                 end
                 % Apply Savitzky-Golay smoothing
                 smoothed_lfp = sgolayfilt(d.cleaned_LFP{k}(1,:), sgolay_order, smooth_window);
+
+            case 'none'
+                 % Apply no smoothing, keep original signal
+                smoothed_lfp = d.cleaned_LFP{k}(1,:); % it will be called smoothed_lfp but nothing was applied
         end
 
         % Keep original triggers
@@ -250,6 +254,6 @@ for k = 1:4
     end
 end
 
-
 fprintf('LFP filtering completed.\n');
+
 
