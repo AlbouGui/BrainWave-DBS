@@ -218,7 +218,7 @@ end
 smooth_method = 'movmean';  % options: 'movmean' or 'sgolay'
 
 % Define the smoothing window size (in samples)
-smooth_window = round(0.5 * Fs); % 0.5 seconds
+smooth_window = round(0.5 * Fs); % 0.5 needs to be customize depending on the filter chosen and your needs
 fprintf('Applying smoothing (window = %.1f seconds) using %s...\n', smooth_window/Fs, smooth_method);
 
 % If using Savitzky-Golay, define polynomial order
